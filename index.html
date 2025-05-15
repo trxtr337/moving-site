@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Moving Bros</title>
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="src/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For icons -->
 </head>
 <body>
 
-  <!-- Header -->
   <header class="hero">
-    <h1>Moving Bros</h1>
-    <p>Stress-free moving in Hamilton and nearby areas</p>
-    <a href="https://wa.me/15145817174?text=Hi! I'm looking to book a move with you." class="btn">Message on WhatsApp</a>
+    <div class="container">
+      <h1>Moving Bros</h1>
+      <p>Stress-free student moving in Hamilton and nearby areas</p>
+      <a href="https://wa.me/15145817174?text=Hi! I'm looking to book a move with you." class="btn">Message on WhatsApp</a>
+    </div>
   </header>
 
-  <!-- Services -->
   <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Local and short-distance moves</li>
-      <li>Furniture loading and unloading</li>
-      <li>Stairs and heavy lifting</li>
-      <li>Flexible hours (evenings & weekends)</li>
-    </ul>
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="service">
+          <i class="fas fa-truck"></i>
+          <p>Local & Short-Distance Moves</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-couch"></i>
+          <p>Furniture Loading & Unloading</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-dolly"></i>
+          <p>Heavy Lifting & Stairs</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-clock"></i>
+          <p>Evenings & Weekends</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="pricing">
-    <h2>Pricing</h2>
-    <p><strong>$80/hour</strong> — 2 movers + U-Haul truck</p>
-    <p><strong>$60/hour</strong> — 2 movers (no truck)</p>
-    <p>No hidden fees. 1-hour minimum.</p>
+  <section class="pricing alt-bg">
+    <div class="container">
+      <h2>Pricing</h2>
+      <p><strong>$80/hour</strong> — 2 movers + U-Haul truck</p>
+      <p><strong>$60/hour</strong> — 2 movers (no truck)</p>
+      <p>1-hour minimum. No hidden fees.</p>
+    </div>
   </section>
 
-  <!-- Contact -->
   <section class="contact">
-    <h2>Get in Touch</h2>
-    <a href="tel:+15145817174" class="btn">Call Us</a>
-    <a href="https://wa.me/15145817174?text=Hi! I'm interested in moving services." class="btn">WhatsApp Us</a>
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <a href="tel:+15145817174" class="btn">Call Us</a>
+      <a href="https://wa.me/15145817174" class="btn">WhatsApp</a>
+    </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Moving Bros. Hamilton, ON</p>
+    <div class="container">
+      <p>© 2025 Moving Bros — Hamilton, ON</p>
+    </div>
   </footer>
 
   <script src="src/script.js"></script>
