@@ -1,0 +1,119 @@
+/* ====== Base Setup ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ====== Layout ====== */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2A9D8F;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 8px 0;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  background-color: #f4fdfc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #2A9D8F;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #21867a;
+}
+
+/* ====== Buttons ====== */
+.btn {
+  display: inline-block;
+  background-color: #2A9D8F;
+  color: white;
+  padding: 10px 22px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #21867a;
+}
+
+/* ====== Footer ====== */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #666;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero .btn,
+  .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
