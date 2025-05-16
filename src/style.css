@@ -1,3 +1,4 @@
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -42,21 +43,51 @@ p {
   font-size: 1.1rem;
 }
 
+/* BUTTONS */
 .btn {
   display: inline-block;
   background-color: #2A9D8F;
   color: white;
-  padding: 12px 28px;
+  padding: 14px 28px;
   margin: 10px;
   border-radius: 8px;
   font-weight: 600;
-  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: #21867a;
 }
 
+/* Remove hover effects on mobile */
+@media (hover: none) {
+  .btn:hover {
+    background-color: #2A9D8F;
+  }
+}
+
+.btn.alt {
+  background-color: white;
+  color: #2A9D8F;
+  border: 2px solid #2A9D8F;
+}
+
+.btn.alt:hover {
+  background-color: #e0f7f4;
+  color: #1a1a1a;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* HERO */
 .hero {
   position: relative;
   height: 100vh;
@@ -94,24 +125,7 @@ p {
   margin-bottom: 30px;
 }
 
-.btn-group {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn.alt {
-  background-color: white;
-  color: #2A9D8F;
-  border: 2px solid #2A9D8F;
-}
-
-.btn.alt:hover {
-  background-color: #e0f7f4;
-  color: #1a1a1a;
-}
-
+/* GRID LAYOUT */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -119,25 +133,11 @@ p {
   margin-top: 30px;
 }
 
-.service i {
-  font-size: 2.2rem;
-  color: #2A9D8F;
-  margin-bottom: 10px;
-}
-
 .alt-bg {
   background-color: #f9f9f9;
 }
 
-footer {
-  padding: 40px 0;
-  background: #f4f4f4;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Cards */
+/* SERVICE & TRUST CARDS */
 .cards .card {
   background-color: white;
   border-radius: 12px;
@@ -179,27 +179,16 @@ footer {
   }
 }
 
+/* TRUST BLOCK */
 .trust {
   padding-top: 80px;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 15px;
-  }
+.trust-point {
+  text-align: center;
 }
 
-
-
+/* FORM SECTION */
 .form-section input,
 .form-section textarea {
   width: 100%;
@@ -221,10 +210,86 @@ footer {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  padding: 0 20px;
 }
 
 .quote-form .btn {
   width: 100%;
   text-align: center;
   margin-top: 15px;
+}
+
+/* THANK YOU MESSAGE (for JS feedback) */
+.thank-you {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2A9D8F;
+  padding: 20px;
+  display: none;
+}
+
+/* CONTACT */
+.contact .btn {
+  margin: 10px 15px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 0;
+  background: #f4f4f4;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* MOBILE ADAPTATION */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .hero {
+    height: 80vh;
+    padding: 40px 10px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .quote-form {
+    padding: 0 10px;
+  }
+
+  .form-section input,
+  .form-section textarea {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.hero-buttons .btn {
+  width: 220px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 14px 0;
 }
