@@ -62,7 +62,6 @@ p {
   background-color: #21867a;
 }
 
-/* Remove hover effects on mobile */
 @media (hover: none) {
   .btn:hover {
     background-color: #2A9D8F;
@@ -78,13 +77,6 @@ p {
 .btn.alt:hover {
   background-color: #e0f7f4;
   color: #1a1a1a;
-}
-
-.btn-group {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* HERO */
@@ -125,70 +117,94 @@ p {
   margin-bottom: 30px;
 }
 
-/* GRID LAYOUT */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
 }
 
-.alt-bg {
-  background-color: #f9f9f9;
+.hero-buttons .btn {
+  width: 220px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 14px 0;
 }
 
-/* SERVICE & TRUST CARDS */
-.cards .card {
-  background-color: white;
-  border-radius: 12px;
+/* OUR SERVICES */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.service-item i {
+  font-size: 1.8rem;
+  color: #2A9D8F;
+  margin-right: 15px;
+}
+
+/* WHY CHOOSE US */
+.trust {
+  background-color: #e6f7f5;
+}
+
+.trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.trust-badge {
+  background: #ffffff;
+  padding: 16px 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.trust-badge i {
+  color: #2A9D8F;
+  font-size: 1.4rem;
+}
+
+/* PRICING */
+.pricing-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.price-box {
+  background: #fff;
   padding: 25px 20px;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 0.6s forwards;
+  border: 2px solid #2A9D8F;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.cards .card:nth-child(1) { animation-delay: 0.1s; }
-.cards .card:nth-child(2) { animation-delay: 0.2s; }
-.cards .card:nth-child(3) { animation-delay: 0.3s; }
-.cards .card:nth-child(4) { animation-delay: 0.4s; }
-
-.cards .card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-}
-
-.card i {
-  font-size: 2.2rem;
+.price-box h3 {
+  font-size: 1.6rem;
   color: #2A9D8F;
   margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #222;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* TRUST BLOCK */
-.trust {
-  padding-top: 80px;
-}
-
-.trust-point {
-  text-align: center;
-}
-
-/* FORM SECTION */
+/* FORM */
 .form-section input,
 .form-section textarea {
   width: 100%;
@@ -219,7 +235,6 @@ p {
   margin-top: 15px;
 }
 
-/* THANK YOU MESSAGE (for JS feedback) */
 .thank-you {
   text-align: center;
   font-size: 1.2rem;
@@ -242,7 +257,7 @@ footer {
   color: #555;
 }
 
-/* MOBILE ADAPTATION */
+/* MOBILE */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
@@ -266,30 +281,53 @@ footer {
     font-size: 1rem;
   }
 
-  .quote-form {
-    padding: 0 10px;
+  .services-list {
+    align-items: stretch;
   }
 
-  .form-section input,
-  .form-section textarea {
-    font-size: 16px;
-    padding: 14px;
+  .trust-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
   }
 }
 
 
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
   margin-top: 30px;
 }
 
-.hero-buttons .btn {
-  width: 220px;
+.service-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   text-align: center;
-  font-size: 1rem;
-  padding: 14px 0;
+  transition: 0.3s ease;
+  max-width: 280px;
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: #2A9D8F;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  color: #222;
 }
