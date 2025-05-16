@@ -197,3 +197,34 @@ footer {
     font-size: 15px;
   }
 }
+
+
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.form-section textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.quote-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.quote-form .btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
