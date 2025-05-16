@@ -57,7 +57,6 @@ p {
   background-color: #21867a;
 }
 
-/* Hero */
 .hero {
   position: relative;
   height: 100vh;
@@ -76,7 +75,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.55); /* затемнение фона */
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
@@ -93,19 +92,6 @@ p {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-}
-
-.hero .btn {
-  background-color: #2A9D8F;
-  padding: 14px 30px;
-  font-size: 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.hero .btn:hover {
-  background-color: #21867a;
 }
 
 .btn-group {
@@ -126,8 +112,6 @@ p {
   color: #1a1a1a;
 }
 
-
-/* Services */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -141,12 +125,10 @@ p {
   margin-bottom: 10px;
 }
 
-/* Pricing Alt Background */
 .alt-bg {
   background-color: #f9f9f9;
 }
 
-/* Footer */
 footer {
   padding: 40px 0;
   background: #f4f4f4;
@@ -155,7 +137,52 @@ footer {
   color: #555;
 }
 
-/* Responsive */
+/* Cards */
+.cards .card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.cards .card:nth-child(1) { animation-delay: 0.1s; }
+.cards .card:nth-child(2) { animation-delay: 0.2s; }
+.cards .card:nth-child(3) { animation-delay: 0.3s; }
+.cards .card:nth-child(4) { animation-delay: 0.4s; }
+
+.cards .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card i {
+  font-size: 2.2rem;
+  color: #2A9D8F;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trust {
+  padding-top: 80px;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
@@ -169,20 +196,4 @@ footer {
     padding: 10px 20px;
     font-size: 15px;
   }
-}
-
-/*trust us*/
-.trust i {
-  font-size: 2rem;
-  color: #2A9D8F;
-  margin-bottom: 10px;
-}
-
-.trust-point {
-  text-align: center;
-}
-
-.trust-point p {
-  font-size: 1.05rem;
-  font-weight: 500;
 }
