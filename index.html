@@ -7,6 +7,27 @@
   <link rel="stylesheet" href="src/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L26PW1VCSN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L26PW1VCSN');
+  </script>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Reliable student movers in Hamilton. Fast, friendly, affordable local moving services.">
+  <meta name="keywords" content="Hamilton movers, student moving, U-Haul help, furniture movers, local move">
+  <meta name="author" content="Moving Bros">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Moving Bros — Hamilton Student Movers" />
+  <meta property="og:description" content="Fast, friendly & affordable moving help in Hamilton. 2 student movers + truck." />
+  <meta property="og:url" content="https://hamiltonmovers.netlify.app" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hamiltonmovers.netlify.app/preview.jpg" />
+  <link rel="icon" type="image/png" href="src/assets/favicon.png" />
 </head>
 <body>
 
@@ -20,8 +41,8 @@
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#quote" onclick="closeMenu()">Get a Quote</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
       <li><a href="tel:+15145817174" onclick="closeMenu()">Call Us</a></li>
-      <li><a href="https://wa.me/15145817174" onclick="closeMenu()">WhatsApp</a></li>
     </ul>
   </nav>
 
@@ -35,6 +56,11 @@
       </div>
     </div>
   </header>
+
+  <!-- ✅ Срочная плашка -->
+  <div class="availability-banner">
+    ✅ We still have slots available <strong>this week</strong>. Book now!
+  </div>
 
   <section class="services alt-bg">
     <div class="container">
@@ -104,6 +130,15 @@
     </div>
   </section>
 
+  <!-- ✅ About Us -->
+  <section class="about alt-bg" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We're a team of university students in Hamilton who know what it's like to move on a budget. We started Moving Bros to help people like us — fast, strong, reliable, and fair.</p>
+      <p>We work evenings and weekends, and we hustle hard. No hidden fees. No attitude. Just honest help with your move.</p>
+    </div>
+  </section>
+
   <section class="form-section" id="quote">
     <div class="container">
       <h2>Request a Move</h2>
@@ -133,9 +168,8 @@
     </div>
   </footer>
 
-  <!-- Sticky Call to Action -->
+  <!-- ✅ Sticky CTA -->
   <a href="#quote" class="sticky-cta" id="stickyQuoteBtn">Get a Free Quote</a>
-
 
   <script src="src/script.js"></script>
 </body>
