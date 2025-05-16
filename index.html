@@ -10,6 +10,21 @@
 </head>
 <body>
 
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <div class="nav-container">
+      <div class="logo">Moving Bros</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#quote" onclick="closeMenu()">Get a Quote</a></li>
+      <li><a href="tel:+15145817174" onclick="closeMenu()">Call Us</a></li>
+      <li><a href="https://wa.me/15145817174" onclick="closeMenu()">WhatsApp</a></li>
+    </ul>
+  </nav>
+
   <header class="hero">
     <div class="container">
       <h1>Moving Bros</h1>
@@ -22,29 +37,28 @@
   </header>
 
   <section class="services alt-bg">
-  <div class="container">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <i class="fas fa-truck"></i>
-        <h3>Local & Short-Distance Moves</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-couch"></i>
-        <h3>Furniture Loading & Unloading</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-dolly"></i>
-        <h3>Heavy Lifting & Stairs</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-calendar-check"></i>
-        <h3>Evenings & Weekends</h3>
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <i class="fas fa-truck"></i>
+          <h3>Local & Short-Distance Moves</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-couch"></i>
+          <h3>Furniture Loading & Unloading</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-dolly"></i>
+          <h3>Heavy Lifting & Stairs</h3>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Evenings & Weekends</h3>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <section class="trust">
     <div class="container">
@@ -118,6 +132,9 @@
       <p>© 2025 Moving Bros — Hamilton, ON</p>
     </div>
   </footer>
+
+  <!-- Sticky Call to Action -->
+  <a href="#quote" class="sticky-cta">Get a Free Quote</a>
 
   <script src="src/script.js"></script>
 </body>

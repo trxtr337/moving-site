@@ -331,3 +331,93 @@ footer {
   font-size: 1.1rem;
   color: #222;
 }
+
+
+/* BURGER MENU */
+.mobile-nav {
+  display: none;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2A9D8F;
+}
+
+.menu-toggle i {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  background: white;
+}
+
+.nav-links li {
+  border-top: 1px solid #eee;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  background: #f5f5f5;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+/* STICKY CTA */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2A9D8F;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* ENABLE on mobile only */
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+
+  .sticky-cta {
+    display: block;
+  }
+
+  body {
+    padding-top: 58px; /* space for sticky nav */
+  }
+}
