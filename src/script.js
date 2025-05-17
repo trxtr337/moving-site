@@ -1,96 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".quote-form");
-  const thankYou = document.getElementById("thank-you");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" },
-    }).then(response => {
-      if (response.ok) {
-        form.reset();
-        thankYou.style.display = "block";
-        thankYou.scrollIntoView({ behavior: "smooth" });
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    });
-  });
-});
-
-// Burger menu open/close
+// 📱 Mobile Nav Toggle
 function toggleMenu() {
-  const nav = document.getElementById('nav-links');
-  nav.classList.toggle('show');
+  const menu = document.getElementById("nav-links");
+  menu.classList.toggle("show");
 }
 
 function closeMenu() {
-  const nav = document.getElementById('nav-links');
-  nav.classList.remove('show');
+  const menu = document.getElementById("nav-links");
+  menu.classList.remove("show");
 }
 
-// Optional: show "Thank you" message on form submission
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".quote-form");
-  const thankYou = document.getElementById("thank-you");
+// 📩 AJAX Form Submission
+const form = document.querySelector(".quote-form");
+const thankYou = document.getElementById("thank-you");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          thankYou.style.display = "block";
-          thankYou.scrollIntoView({ behavior: "smooth" });
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      });
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // ⛔️ stop page reload
+
+    const data = new FormData(form);
+    const endpoint = "https://formspree.io/f/xnndwabo";
+
+    fetch(endpoint, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        thankYou.style.display = "block";
+        thankYou.scrollIntoView({ behavior: "smooth" });
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    })
+    .catch(() => {
+      alert("Error connecting to server. Please try again.");
     });
-  }
-});
-
-
-// Плавный переход и скрытие кнопки после клика
-document.addEventListener("DOMContentLoaded", () => {
-  const stickyBtn = document.getElementById("stickyQuoteBtn");
-
-  if (stickyBtn) {
-    stickyBtn.addEventListener("click", (e) => {
-      e.preventDefault(); // отменяем стандартный переход по якорю
-      document.getElementById("quote").scrollIntoView({ behavior: "smooth" });
-
-      // прячем кнопку после перехода
-      stickyBtn.style.display = "none";
-    });
-  }
-
-  // остальной код формы (если был)
-  const form = document.querySelector(".quote-form");
-  const thankYou = document.getElementById("thank-you");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          thankYou.style.display = "block";
-          thankYou.scrollIntoView({ behavior: "smooth" });
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      });
-    });
-  }
-});
+  });
+}

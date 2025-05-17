@@ -3,35 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moving Bros</title>
+  <title>Moving Bros — Hamilton Movers | Student Moving Services</title>
+
+  <!-- ✅ Fonts + Icons -->
   <link rel="stylesheet" href="src/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <!-- ✅ Google Analytics -->
+  <!-- ✅ Google Analytics with Enhanced Link Attribution -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L26PW1VCSN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-L26PW1VCSN');
+    gtag('config', 'G-L26PW1VCSN', {
+      'link_attribution': true,
+      'anonymize_ip': true,
+      'page_path': location.pathname
+    });
   </script>
 
   <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="Reliable student movers in Hamilton. Fast, friendly, affordable local moving services.">
-  <meta name="keywords" content="Hamilton movers, student moving, U-Haul help, furniture movers, local move">
-  <meta name="author" content="Moving Bros">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Top-rated student movers in Hamilton, Ontario. Affordable U-Haul loading, furniture moving, stairs, evening and weekend moves. Serving Hamilton, McMaster, Stoney Creek, Dundas, Ancaster." />
+  <meta name="keywords" content="Hamilton movers, student moving Hamilton, affordable movers Hamilton, McMaster movers, U-Haul help Hamilton, Dundas movers, Stoney Creek moving, Ancaster student movers, Hamilton Ontario movers" />
+  <meta name="author" content="Moving Bros" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English"> 
+  <meta name="geo.region" content="CA-ON">
+  <meta name="geo.placename" content="Hamilton">
+  <meta name="geo.position" content="43.2557;-79.8711">
+  <meta name="ICBM" content="43.2557, -79.8711">
+
+  <!-- ✅ Open Graph / Facebook -->
   <meta property="og:title" content="Moving Bros — Hamilton Student Movers" />
-  <meta property="og:description" content="Fast, friendly & affordable moving help in Hamilton. 2 student movers + truck." />
+  <meta property="og:description" content="Fast, friendly & affordable moving help in Hamilton. 2 strong student movers + truck. Call now or request a free quote online!" />
   <meta property="og:url" content="https://hamiltonmovers.netlify.app" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://hamiltonmovers.netlify.app/preview.jpg" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moving Bros — Student Movers in Hamilton, ON">
+  <meta name="twitter:description" content="Reliable moving help for students and locals. Call or book your move today.">
+  <meta name="twitter:image" content="https://hamiltonmovers.netlify.app/preview.jpg">
+  <meta name="twitter:site" content="@movingbrosham">
+
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="src/assets/favicon.png" />
+
+  <!-- ✅ Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Moving Bros",
+    "image": "https://hamiltonmovers.netlify.app/preview.jpg",
+    "@id": "https://hamiltonmovers.netlify.app",
+    "url": "https://hamiltonmovers.netlify.app",
+    "telephone": "+15145817174",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "McMaster University Area",
+      "addressLocality": "Hamilton",
+      "addressRegion": "ON",
+      "postalCode": "L8S",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.2557,
+      "longitude": -79.8711
+    },
+    "sameAs": [
+      "https://www.instagram.com/movingbros/",
+      "https://wa.me/15145817174"
+    ],
+    "openingHours": ["Mo-Su 08:00-21:00"],
+    "priceRange": "$$",
+    "description": "Affordable student movers in Hamilton, Ontario. We provide U-Haul loading, stairs, and weekend moving. Serving McMaster, Dundas, Stoney Creek, and beyond."
+  }
+  </script>
 </head>
 <body>
-
-  <!-- Mobile Navigation -->
+  <!-- 📱 Mobile Navigation -->
   <nav class="mobile-nav">
     <div class="nav-container">
       <div class="logo">Moving Bros</div>
@@ -46,6 +101,7 @@
     </ul>
   </nav>
 
+  <!-- 🟢 Hero Section -->
   <header class="hero">
     <div class="container">
       <h1>Moving Bros</h1>
@@ -57,77 +113,45 @@
     </div>
   </header>
 
-  <!-- Desktop Navigation -->
-
+  <!-- 📦 Services -->
   <section class="services alt-bg">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-cards">
-        <div class="service-card">
-          <i class="fas fa-truck"></i>
-          <h3>Local & Short-Distance Moves</h3>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-couch"></i>
-          <h3>Furniture Loading & Unloading</h3>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-dolly"></i>
-          <h3>Heavy Lifting & Stairs</h3>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-calendar-check"></i>
-          <h3>Evenings & Weekends</h3>
-        </div>
+        <div class="service-card"><i class="fas fa-truck"></i><h3>Local & Short-Distance Moves</h3></div>
+        <div class="service-card"><i class="fas fa-couch"></i><h3>Furniture Loading & Unloading</h3></div>
+        <div class="service-card"><i class="fas fa-dolly"></i><h3>Heavy Lifting & Stairs</h3></div>
+        <div class="service-card"><i class="fas fa-calendar-check"></i><h3>Evenings & Weekends</h3></div>
       </div>
     </div>
   </section>
 
+  <!-- ⭐ Why Choose Us -->
   <section class="trust">
     <div class="container">
       <h2>Why Choose Us?</h2>
       <div class="trust-list">
-        <div class="trust-badge">
-          <i class="fas fa-clock"></i>
-          <span>Always on time</span>
-        </div>
-        <div class="trust-badge">
-          <i class="fas fa-user-friends"></i>
-          <span>Friendly movers</span>
-        </div>
-        <div class="trust-badge">
-          <i class="fas fa-dollar-sign"></i>
-          <span>No hidden fees</span>
-        </div>
-        <div class="trust-badge">
-          <i class="fas fa-calendar-alt"></i>
-          <span>Weekends available</span>
-        </div>
+        <div class="trust-badge"><i class="fas fa-clock"></i><span>Always on time</span></div>
+        <div class="trust-badge"><i class="fas fa-user-friends"></i><span>Friendly movers</span></div>
+        <div class="trust-badge"><i class="fas fa-dollar-sign"></i><span>No hidden fees</span></div>
+        <div class="trust-badge"><i class="fas fa-calendar-alt"></i><span>Weekends available</span></div>
       </div>
     </div>
   </section>
 
+  <!-- 💰 Pricing -->
   <section class="pricing alt-bg">
     <div class="container">
       <h2>Pricing</h2>
       <div class="pricing-cards">
-        <div class="price-box">
-          <h3>$65/hour</h3>
-          <p>2 movers + U-Haul truck</p>
-        </div>
-        <div class="price-box">
-          <h3>$40/hour</h3>
-          <p>2 movers (no truck)</p>
-        </div>
-        <div class="price-box">
-          <p>1-hour minimum</p>
-          <p>No hidden fees</p>
-        </div>
+        <div class="price-box"><h3>$65/hour</h3><p>2 movers + U-Haul truck</p></div>
+        <div class="price-box"><h3>$40/hour</h3><p>2 movers (no truck)</p></div>
+        <div class="price-box"><p>1-hour minimum</p><p>No hidden fees</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ✅ About Us -->
+  <!-- 👤 About Us -->
   <section class="about alt-bg" id="about">
     <div class="container">
       <h2>About Us</h2>
@@ -136,6 +160,22 @@
     </div>
   </section>
 
+  <!-- 🌟 Testimonials
+  <section class="testimonials alt-bg">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-card">
+        <p>"The guys were amazing. Helped us move last minute and made everything smooth!"</p>
+        <span>— Sarah T., Hamilton</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"Fast, friendly, and on time. Would hire again 100%!"</p>
+        <span>— Mike J., McMaster Student</span>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- 📋 Quote Request -->
   <section class="form-section" id="quote">
     <div class="container">
       <h2>Request a Move</h2>
@@ -151,6 +191,7 @@
     </div>
   </section>
 
+  <!-- ☎ Contact -->
   <section class="contact alt-bg">
     <div class="container">
       <h2>Get in Touch</h2>
@@ -159,15 +200,17 @@
     </div>
   </section>
 
+  <!-- 🔻 Footer -->
   <footer>
     <div class="container">
       <p>© 2025 Moving Bros — Hamilton, ON</p>
     </div>
   </footer>
 
-  <!-- ✅ Sticky CTA -->
+  <!-- 📌 Sticky CTA -->
   <a href="#quote" class="sticky-cta" id="stickyQuoteBtn">Get a Free Quote</a>
 
+  <!-- JS -->
   <script src="src/script.js"></script>
 </body>
 </html>

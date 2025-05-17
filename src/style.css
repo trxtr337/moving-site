@@ -1,113 +1,3 @@
-/* 🔰 Срочная плашка */
-.availability-banner {
-  background-color: #d4f7ee;
-  color: #1a5e53;
-  font-weight: 600;
-  padding: 12px 20px;
-  text-align: center;
-  font-size: 1.05rem;
-  margin-top: -20px;
-  margin-bottom: 20px;
-}
-
-/* 👤 About */
-.about p {
-  max-width: 800px;
-  margin: 0 auto 16px auto;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-/* 📱 Sticky CTA */
-.sticky-cta {
-  display: none;
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #2A9D8F;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  text-decoration: none;
-  font-weight: bold;
-  z-index: 1000;
-}
-
-/* 🍔 Mobile Navigation */
-.mobile-nav {
-  display: none;
-  background: white;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 20px;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #2A9D8F;
-}
-
-.menu-toggle i {
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
-.nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  flex-direction: column;
-  background: white;
-}
-
-.nav-links li {
-  border-top: 1px solid #eee;
-}
-
-.nav-links li a {
-  display: block;
-  padding: 14px 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.nav-links li a:hover {
-  background: #f5f5f5;
-}
-
-.nav-links.show {
-  display: flex;
-}
-
-/* 📱 Mobile Specific */
-@media (max-width: 768px) {
-  .mobile-nav {
-    display: block;
-  }
-
-  .sticky-cta {
-    display: block;
-  }
-
-  body {
-    padding-top: 58px;
-  }
-}
-
-
 /* RESET & BASE */
 * {
   margin: 0;
@@ -266,6 +156,42 @@ p {
   margin-right: 15px;
 }
 
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: 0.3s ease;
+  max-width: 280px;
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: #2A9D8F;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  color: #222;
+}
+
 /* WHY CHOOSE US */
 .trust {
   background-color: #e6f7f5;
@@ -353,6 +279,30 @@ p {
   display: none;
 }
 
+/* TESTIMONIALS */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #2A9D8F;
+}
+
 /* CONTACT */
 .contact .btn {
   margin: 10px 15px;
@@ -405,47 +355,9 @@ footer {
   }
 }
 
-
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  margin-top: 30px;
-}
-
-.service-card {
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 30px 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: 0.3s ease;
-  max-width: 280px;
-  width: 100%;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-.service-card i {
-  font-size: 2.5rem;
-  color: #2A9D8F;
-  margin-bottom: 15px;
-}
-
-.service-card h3 {
-  font-size: 1.1rem;
-  color: #222;
-}
-
-
-/* BURGER MENU */
+/* MOBILE NAV & STICKY CTA */
 .mobile-nav {
-  display: none;
+  display: block;
   background: white;
   border-bottom: 1px solid #eee;
   position: sticky;
@@ -500,7 +412,6 @@ footer {
   display: flex;
 }
 
-/* STICKY CTA */
 .sticky-cta {
   display: none;
   position: fixed;
@@ -517,17 +428,12 @@ footer {
   z-index: 1000;
 }
 
-/* ENABLE on mobile only */
 @media (max-width: 768px) {
-  .mobile-nav {
-    display: block;
-  }
-
   .sticky-cta {
     display: block;
   }
 
   body {
-    padding-top: 58px; /* space for sticky nav */
+    padding-top: 58px;
   }
 }
